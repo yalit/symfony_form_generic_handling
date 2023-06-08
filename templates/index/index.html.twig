@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+{% if app.session.flashBag.has('info') %}
+    <div class="alert alert-success fade in" role="alert">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        {% for msg in app.session.flashBag.get('info') %}
+            {{ msg }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+Hello,
+
+{{ displayForm(form) }}
+{% endblock %}
