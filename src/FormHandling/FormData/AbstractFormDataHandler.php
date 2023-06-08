@@ -15,6 +15,8 @@ abstract class AbstractFormDataHandler implements FormDataHandlerInterface
 
     public function handle(FormInterface &$form, Request $request): FormDataStatus 
     {
+        $form->handleRequest($request);
+        
         if (!$form->isSubmitted()) {
             return FormDataStatus::NotSubmitted;
         }

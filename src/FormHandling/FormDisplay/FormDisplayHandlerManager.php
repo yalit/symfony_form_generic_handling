@@ -27,7 +27,7 @@ final class FormDisplayHandlerManager implements FormDisplayHandlerManagerInterf
             }
         }
 
-        return 'Hello world';
+        return 'No handler found';
     }
     
 }
